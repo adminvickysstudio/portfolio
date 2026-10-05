@@ -173,6 +173,10 @@
 /* ------------------------------------- */
 @media (max-width: 575.99px) {
 
+    .hero-inner-container {
+        height: 100vh;
+    }
+
     /* hero title */
     .hero-title {
         margin: 0 auto;
@@ -211,7 +215,7 @@
 
     /* hero image */
     .hero-img {
-        width: 65%;
+        width: 85%;
     }
 
 }
