@@ -1,0 +1,34 @@
+/* ------------------------------------ */
+/* STYLES FOR FOOTER */
+/* ------------------------------------ */
+
+footer,
+.footer-left,
+.footer-right,
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--muted);
+}
+.name {
+    color: var(--text);
+}
+footer {
+    padding: .8em;
+    font-weight: bold;
+}
+.social-links {
+    list-style-type: none;
+}
+
+/* ------------------------ */
+/* MOBILE SIZE */
+/* ------------------------ */
+@media (max-width: 575.99px) {
+    footer {
+        flex-direction: column;
+    }
+}

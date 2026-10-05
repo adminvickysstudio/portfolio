@@ -1,0 +1,131 @@
+/* ---------------------------------- */
+/* THIS STYLE SHEET FOR THE NAVBAR */
+/* ---------------------------------- */
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    animation: scrolltriggerNavBar linear forwards;
+    animation-timeline: scroll();
+    animation-range: entry 0 cover 10%;
+}
+
+@keyframes scrolltriggerNavBar {
+    to {
+        inset: 0;
+        margin: 10px auto;
+        /* top: 10px; */
+        width: 90%;
+        border-radius: 999px;
+    }
+}
+
+/* logo */
+
+/* navigation */
+.navigation {
+    width: 100%;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigation ul {
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+}
+
+.navigation li {
+    padding: 0.6em 1.2em;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* hamburger menu */
+.hb-menu {
+    display: none;
+}
+
+/* ------------------------------- */
+/* MOBILE VIEW */
+/* ------------------------------- */
+
+@media (max-width: 575.99px) {
+
+    /* style for nav bar collapse */
+    .navigation>ul {
+        position: fixed;
+        top: 70px;
+        margin: auto;
+        z-index: 1000;
+
+        flex-direction: column;
+
+        background-color: transparent;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 10px;
+        width: 90%;
+
+        transform: translateY(-500%);
+        transition-duration: 0.3s;
+    }
+
+    .navigation > ul::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        z-index: -1;
+    }
+
+    /* hamburger menu */
+    .hb-menu {
+        display: block;
+        color: white;
+    }
+    #hb-menu-checkbox {
+        display: none;
+    }
+    #hb-menu-checkbox:checked ~ ul {
+        transform: translateY(0%);
+    }
+
+
+    .navigation li {
+        border-radius: 10px;
+        transition-duration: 0.3s;
+    }
+
+    .navigation li:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    
+}
