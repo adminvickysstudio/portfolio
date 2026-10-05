@@ -61,9 +61,9 @@
 }
 
 /* hamburger menu */
-.hb-menu {
-    display: none;
-}
+#hb-menu-checkbox {
+        display: none;
+    }
 
 /* ------------------------------- */
 /* MOBILE VIEW */
@@ -110,9 +110,7 @@
         display: block;
         color: white;
     }
-    #hb-menu-checkbox {
-        display: none;
-    }
+    
     #hb-menu-checkbox:checked ~ ul {
         transform: translateY(0%);
     }
